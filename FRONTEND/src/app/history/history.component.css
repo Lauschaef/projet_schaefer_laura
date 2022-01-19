@@ -1,0 +1,14 @@
+table {
+    color: white;
+}
+
+thead {
+    background-color: white;
+    color: #AF235F;
+}
+
+img {
+    height: auto;
+    max-width: 30px;
+    object-fit:cover;
+}

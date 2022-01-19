@@ -9,6 +9,7 @@
         <thead>
           <tr>
             <th scope="col">Livre</th>
+            <th scope="col"></th>
             <th scope="col">Prix Unitaire</th>
             <th scope="col">Quantité</th>
             <th scope="col">Total</th>
@@ -19,18 +20,20 @@
           <tr *ngFor="let orderContent of (liste$ | async) as OrderContent">
             <th scope="row">
                 <img src='{{ orderContent.book.image }}'>
+            </th>
+            <td>
                 <div class="ms-2 me-auto">
                     <div class="fw-bold">{{ orderContent.book.title }}</div>
                     {{ orderContent.book.author }}
                 </div>
-            </th>
+            </td>
             <td>
                 {{ (orderContent.book.price)?.toFixed(2) }} €
             </td>
             <td>
-                <button (click)="removeBookOfShoppingCart(orderContent.book)"><i class="bi bi-dash"></i></button>
-                <span>{{ orderContent.quantity }}</span>
-                <button (click)="addBookOnShoppingCart(orderContent.book)"><i class="bi bi-plus"></i></button>
+                <button class="btn btn-outline-light" style="border-radius: 50%;" (click)="removeBookOfShoppingCart(orderContent.book)"><i class="bi bi-dash"></i></button>
+                <span>  {{ orderContent.quantity }}  </span>
+                <button class="btn btn-outline-light" style="border-radius: 50%;" (click)="addBookOnShoppingCart(orderContent.book)"><i class="bi bi-plus"></i></button>
             </td>
             <td>
                 {{ (getTotalProductPrice(orderContent.book.price, orderContent.quantity)).toFixed(2) }} €

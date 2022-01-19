@@ -60,9 +60,8 @@ booksOnShoppingCart : Observable<OrderContent[]>;
       if(!this.param.userIsConnected)
       {
         this.router.navigate(["/catalogue/connexion"]);
-      }
-
-      if(this.store.dispatch.length > 0)
+      } 
+      else if(this.store.dispatch.length > 0)
       {
           let list: OrderContent[] = [];
           this.liste$?.subscribe(

@@ -2,10 +2,35 @@
 <div class="divider"></div>
 
 <div class="container">
-        <div class="col mx-auto" *ngFor="let order of history">
+        <!-- <div class="col mx-auto" *ngFor="let order of history">
             <p>Commande n°{{order.idOrder}} ({{order.date | date:'fullDate':'+0200':'fr'}}) :</p>
             <ul *ngFor="let content of order.content">
                 <li>{{content.book.title}} - Quantité : {{content.quantity}}</li>
             </ul>
-        </div>
+        </div> -->
+
+
+        <table class="table" *ngFor="let order of history">
+            <thead>
+              <tr>
+                <th colspan="3" scope="col">Commande n°{{order.idOrder}} ({{order.date | date:'fullDate':'+0200':'fr'}})</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let content of order.content">
+                <th style="width: 50px;">
+                    <img src='{{ content.book.image }}'>
+                </th>
+                <td style="width: 500px;">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">{{ content.book.title }}</div>
+                        {{ content.book.author }}
+                    </div>
+                </td>
+                <td>
+                    Quantité : {{ content.quantity }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
 </div>
