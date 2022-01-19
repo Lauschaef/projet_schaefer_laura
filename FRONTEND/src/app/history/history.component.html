@@ -1,0 +1,11 @@
+<h2>Historique</h2>
+<div class="divider"></div>
+
+<div class="container">
+        <div class="col mx-auto" *ngFor="let order of history">
+            <p>Commande n°{{order.idOrder}} ({{order.date | date:'fullDate':'+0200':'fr'}}) :</p>
+            <ul *ngFor="let content of order.content">
+                <li>{{content.book.title}} - Quantité : {{content.quantity}}</li>
+            </ul>
+        </div>
+</div>

@@ -1,0 +1,24 @@
+
+
+<h2>Détails de {{book.title}}</h2>
+<div class="divider"></div>
+
+<div class="container mb-3 text-center">
+
+    <img src='{{ book.image }}' class="card-img-top" style="max-height: 300px; width: auto;">
+    <div class="card-body d-flex flex-column ">
+        <div class="m-auto">
+            <p>Auteur : {{book.author}}</p>
+            <p>Genre : {{book.gender}}</p>
+            <p>Note : {{book.popularity?.toFixed(2)}}</p>
+            <p>Prix : {{book.price?.toFixed(2)}} €</p>
+            <p>Référence : {{book.reference}}</p>
+                
+        </div>
+        <div class="m-auto justify-content-md-end">
+            <button (click)="addBookOnShoppingCart(book)" class="btn btn-orange" type="button"><i class="bi bi-cart-plus"></i></button>
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,29 @@
+<h2>Compte client</h2>
+<div class="divider"></div>
+
+<div class="container mb-3" style="text-align: center; width: 30%;">
+
+<form [formGroup]="connectForm" (ngSubmit)="onSubmit()">
+        <div *ngIf="submitted && loginOrPasswordFailed" class="verification">
+            <div>Login ou mot de passe incorrect</div>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="login" formControlName="login">
+            <label for="login">Identifiant</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="password" formControlName="password">
+            <label for="password">Mot de passe</label>
+        </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-orange">Me connecter</button>
+        </div>      
+
+</form>
+
+<div class="d-grid gap-2 col-6 mx-auto" style="margin-top: 10px;">
+    <button class="btn btn-orange nav-link" routerLink="/catalogue/formulaire">Créer un compte</button>
+</div> 
+
+</div>

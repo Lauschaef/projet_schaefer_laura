@@ -1,0 +1,51 @@
+<h2>Panier</h2>
+<div class="divider"></div>
+
+<div class="container mb-3">
+    <div *ngIf="(nb$ | async) == 0 " style="margin-bottom: 20px;">
+        <p align="center">Votre panier est vide</p>
+    </div>
+    <table class="table" *ngIf="(nb$ | async) != 0 ">
+        <thead>
+          <tr>
+            <th scope="col">Livre</th>
+            <th scope="col">Prix Unitaire</th>
+            <th scope="col">Quantité</th>
+            <th scope="col">Total</th>
+            <th scope="col"> </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let orderContent of (liste$ | async) as OrderContent">
+            <th scope="row">
+                <img src='{{ orderContent.book.image }}'>
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">{{ orderContent.book.title }}</div>
+                    {{ orderContent.book.author }}
+                </div>
+            </th>
+            <td>
+                {{ (orderContent.book.price)?.toFixed(2) }} €
+            </td>
+            <td>
+                <button (click)="removeBookOfShoppingCart(orderContent.book)"><i class="bi bi-dash"></i></button>
+                <span>{{ orderContent.quantity }}</span>
+                <button (click)="addBookOnShoppingCart(orderContent.book)"><i class="bi bi-plus"></i></button>
+            </td>
+            <td>
+                {{ (getTotalProductPrice(orderContent.book.price, orderContent.quantity)).toFixed(2) }} €
+            </td>
+            <td>
+                <button (click)="deleteBookOfShoppingCart(orderContent.book)" class="btn btn-orange" type="button"><i class="bi bi-cart-dash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    <p *ngIf="(nb$ | async) != 0 " align="right">Total : {{(total$ | async)?.toFixed(2)}} €</p>
+
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-orange nav-link" (click)="onSubmit()" [disabled]="(nb$ | async) == 0"><i class="bi bi-cart-check"></i> Payer</button>
+    </div>  
+
+</div>
+

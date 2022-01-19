@@ -1,0 +1,75 @@
+<h2>Livres</h2>
+<div class="divider"></div>
+
+<div class="container mb-3">
+    <div>
+        <div class="row g-3">
+            <div class="col align-self-start" id="searchbox" method="get" autocomplete="off">
+                <input type="text" size="15" placeholder="Recherche" [(ngModel)]="searchFilter"/>
+                <input id="button-submit" disabled/>
+            </div>
+            <div class="col col-auto align-self-end">
+                <select [(ngModel)]="sortMode" class="form-select mb-3">
+                    <option value="reference" selected disabled>Trier par</option>
+                    <option value="title">Titre</option>
+                    <option value="author">Auteur</option>
+                    <option value="popularity">Popularité</option>
+                    <option value="price">Prix croissant</option>
+                    <option value="!price">Prix décroissant</option>
+                </select>
+            </div>
+        </div>
+        <div class="row g-3" id="filters" >
+            <div class="form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="all" value="" [(ngModel)]="genderFilter" checked>
+                <label class="form-check-label" for="all">Tous les genres</label>
+            </div>
+            <div class="form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="romance" value="Romance" [(ngModel)]="genderFilter">
+                <label class="form-check-label" for="romance">Romance</label>
+            </div>
+            <div class="form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="fantastique" value="Fantastique" [(ngModel)]="genderFilter">
+                <label class="form-check-label" for="fantastique">Fantastique</label>
+            </div>
+            <div class="form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="drame" value="Drame" [(ngModel)]="genderFilter">
+                <label class="form-check-label" for="drame">Drame</label>
+            </div>
+            <div class="form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="policier" value="Policier" [(ngModel)]="genderFilter">
+                <label class="form-check-label" for="policier">Policier</label>
+            </div>
+            <div class="form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="jeunesse" value="Jeunesse" [(ngModel)]="genderFilter">
+                <label class="form-check-label" for="jeunesse">Jeunesse</label>
+            </div>
+            <div class="form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="guerre" value="Guerre" [(ngModel)]="genderFilter">
+                <label class="form-check-label" for="guerre">Guerre</label>
+            </div>
+            <div class="form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="humour" value="Humour" [(ngModel)]="genderFilter">
+                <label class="form-check-label" for="humour">Humour</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row row-cols-xxl-6 row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-4">
+        <div class="col mx-auto" *ngFor="let book of (books | genderFilterPipe: genderFilter | searchFilterPipe: searchFilter | orderBy : sortMode) as Book">
+            <div class="card h-100">
+                <img src='{{ book.image }}' class="card-img-top">
+                <div class="card-body d-flex flex-column text-center">
+                    <div class="m-auto">
+                        <h4 class="title-link" routerLink="/catalogue/book/{{book.reference}}">{{ book.title }}</h4>
+                            <h5>{{ book.author }}</h5>
+                        <p class="card-text fs-5 fw-bold">{{ (book.price)?.toFixed(2) }} €</p>
+                    </div>
+                    <div class="m-auto justify-content-md-end">
+                        <button (click)="addBookOnShoppingCart(book)" class="btn btn-orange" type="button"><i class="bi bi-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

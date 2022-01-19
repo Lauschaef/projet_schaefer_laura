@@ -1,0 +1,53 @@
+Book:
+    type: entity
+    table: book
+    id:
+        idbook:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        ref:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        title:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        author:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        popularity:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+        price:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+        image:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        idgender:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,137 @@
+[
+    {
+        "reference":"062340",
+        "title":"April, May, June",
+        "author":"Robin Benway",
+        "popularity": 8.11,
+        "price":15.90,
+        "image":"https://cdn1.booknode.com/book_cover/62/full/april-may-et-june-62157.jpg",
+        "gender":"Fantastique"
+    },
+    {
+        "reference":"02204095",
+        "title":"Jamais plus",
+        "author":"Colleen Hoover",
+        "popularity":8.87,
+        "price":7.60,
+        "image":"https://cdn1.booknode.com/book_cover/894/full/jamais-plus-893786.jpg",
+        "gender":"Drame"
+    },
+    {
+        "reference":"08791",
+        "title":"La Couleur de l'âme des anges",
+        "author":"Sophie Audouin-Mamikonian",
+        "popularity":8.08,
+        "price":17.90,
+        "image":"https://cdn1.booknode.com/book_cover/544/full/la-couleur-de-lame-des-anges-tome-1-543892.jpg",
+        "gender":"Fantastique"
+    },
+    {
+        "reference":"02451643",
+        "title":"La Fille sans passé",
+        "author":"Sarah Everett",
+        "popularity":7.89,
+        "price":7.90,
+        "image":"https://cdn1.booknode.com/book_cover/1356/full/la-fille-sans-passe-1356058.jpg",
+        "gender" : "Romance"
+    },
+    {
+        "reference":"0606942",
+        "title":"La Vérité sur l'Affaire Harry Quebert",
+        "author":"Joël Dicker",
+        "popularity":8.84,
+        "price":9.20,
+        "image":"https://cdn1.booknode.com/book_cover/1165/full/la-verite-sur-laffaire-harry-quebert-1164834.jpg",
+        "gender" : "Policier"
+    },
+    {
+        "reference":"03761",
+        "title":"L'Enfant Océan",
+        "author":"Jean-Claude Mourlevat",
+        "popularity":7.3,
+        "price":4.95,
+        "image":"https://cdn1.booknode.com/book_cover/1854/full/lenfant-ocean-1853812.jpg",
+        "gender" : "Jeunesse"
+    },
+    {
+        "reference":"016273",
+        "title":"Si je reste",
+        "author":"Gayle Forman",
+        "popularity": 8.21,
+        "price":6.50,
+        "image":"https://cdn1.booknode.com/book_cover/506/full/si-je-reste-506123.jpg",
+        "gender" : "Romance"
+    },
+    {
+        "reference":"0328002",
+        "title":"Un avion sans elle",
+        "author":"Michel Bussi",
+        "popularity": 8.16,
+        "price":7.95,
+        "image":"https://cdn1.booknode.com/book_cover/3773/full/un-avion-sans-elle-3772913.jpg",
+        "gender" : "Policier"
+    },
+    {
+        "reference":"0872",
+        "title":"W ou le souvenir d'enfance",
+        "author":"Georges Perec",
+        "popularity": 6.94,
+        "price":8.90,
+        "image":"https://cdn1.booknode.com/book_cover/2/full/w-ou-le-souvenir-denfance-1726.jpg",
+        "gender" : "Guerre"
+    },
+    {
+        "reference":"0126322",
+        "title":"La sélection",
+        "author":"Kiera Cass",
+        "popularity": 8.63,
+        "price":16.90,
+        "image":"https://cdn1.booknode.com/book_cover/945/full/la-selection-tome-1-la-selection-945412.jpg",
+        "gender" : "Romance"
+    },
+    {
+        "reference":"0115443",
+        "title":"Soeurs sorcières",
+        "author":"Jessica Spotswood",
+        "popularity": 8.32,
+        "price": 15.95,
+        "image":"https://cdn1.booknode.com/book_cover/3903/full/soeurs-sorcieres-tome-1-3903433.jpg",
+        "gender" : "Fantastique"
+    },
+    {
+        "reference":"01845755",
+        "title":"Did I Mention I Love You",
+        "author":"Estelle Maskame",
+        "popularity": 8.26,
+        "price": 16.90,
+        "image":"https://cdn1.booknode.com/book_cover/703/full/dimily-tome-1-did-i-mention-i-love-you-702793.jpg",
+        "gender" : "Romance"
+    },
+    {
+        "reference":"056207",
+        "title":"La Fille de papier",
+        "author":"Guillaume Musso",
+        "popularity": 8.45,
+        "price": 8.20,
+        "image":"https://cdn1.booknode.com/book_cover/666/full/la-fille-de-papier-666163.jpg",
+        "gender" : "Romance"
+    },
+    {
+        "reference":"054266",
+        "title":"Les Royaumes du Nord",
+        "author":"Philip Pullman",
+        "popularity": 8.29,
+        "price": 9.30,
+        "image":"https://cdn1.booknode.com/book_cover/993/full/a-la-croisee-des-mondes-tome-1-les-royaumes-du-nord-993484.jpg",
+        "gender" : "Fantastique"
+    },
+    {
+        "reference":"01732413",
+        "title":"Quelqu'un pour qui trembler",
+        "author":"Gilles Legardinier",
+        "popularity": 8.21,
+        "price": 7.95,
+        "image":"https://cdn1.booknode.com/book_cover/680/full/quelquun-pour-qui-trembler-680448.jpg",
+        "gender" : "Humour"
+    }
+]

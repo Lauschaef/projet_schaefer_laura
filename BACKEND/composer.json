@@ -1,0 +1,14 @@
+{
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.2",
+        "tuupola/slim-jwt-auth": "^3.5",
+        "doctrine/orm": "2.*",
+        "doctrine/cache": "^1.11",
+        "symfony/yaml": "2.*"
+    },
+    "autoload": {
+        "psr-0": {"": "src/"}
+
+    }
+}

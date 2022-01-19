@@ -1,0 +1,23 @@
+OrderContent:
+    type: entity
+    table: order_content
+    id:
+        idorder:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+        idbook:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+    fields:
+        quantity:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+    lifecycleCallbacks: {  }
