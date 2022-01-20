@@ -251,7 +251,7 @@
             $genderRepository = $entityManager->getRepository('Gender');
 
             $dataUser = $userRepository->findOneBy(array('login' => $login));
-            $dataOrder = $orderRepository->findBy(array('idclient' => $dataUser->getIduser()));
+            $dataOrder = $orderRepository->findBy(array('idclient' => $dataUser->getIduser()), array('idorder' => 'DESC'));
 
             if(!$dataOrder){
                 return $response->withStatus(204);
