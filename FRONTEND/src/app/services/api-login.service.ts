@@ -10,7 +10,6 @@ import { User } from '../models/user.model';
 export class ApiLoginService {
 
   URL_API_LOGIN : string = "https://tp-bdd.herokuapp.com/api/login" as const;
-  // URL_API_AUTH : string = "https://tp-bdd.herokuapp.com/api/auth" as const;
   URL_API_CREATE_USER : string = "https://tp-bdd.herokuapp.com/api/create_user" as const;
 
   constructor(private http : HttpClient) { 

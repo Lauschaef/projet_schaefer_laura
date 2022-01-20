@@ -57,21 +57,6 @@
 
     session_start();
 
-    // $app->get('/api/auth/{login}',
-    //     function(Request $request, Response $response, $args){
-    //         $login = $args['login'];
-    //         if($login){
-    //             $data = array('login' => $login);
-    //             $response = addHeaders($response);
-    //             $response = createJWT($response);
-    //             $response->getBody()->write(json_encode($data));
-    //         } else {
-    //             $response = $response->withStatus(401);
-    //         }
-    //         return $response;
-    //     }
-    // );
-
 // ***** CUSTOMER ***** //    
 
     $app->post('/api/login',
@@ -274,12 +259,23 @@
 
             $orders = [];
             foreach($dataOrder as $order){
+                
+                if($order == null){
+                    continue;
+                }
+
                 $dataOrderContent = $orderContentRepository->findBy(array('idorder' => $order->getIdorder()));
 
                 $orderContents = [];
                 foreach($dataOrderContent as $orderContent){
                     $dataBook = $bookRepository->findOneBy(array('idbook' => $orderContent->getIdbook()));
+                    if($dataBook == null){
+                        continue;
+                    }
                     $dataGender = $genderRepository->findOneBy(array('idgender' => $dataBook->getIdgender()));
+                    if($dataGender == null){
+                        continue;
+                    }
 
                     $book = [
                         'reference' => $dataBook->getRef(),
